@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: skyblue;
+}
+.container {
+  height: 300px;
+  width: 500px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.container .carousel-list {
+  display: flex;
+}
+.container .carousel-list .carousel-item {
+  height: 300px;
+  width: 500px;
+  flex-shrink: 0;
+}
+.container .carousel-list .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.container .allow-left,
+.container .allow-right {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(123, 134, 162, 0.2);
+  cursor: pointer;
+}
+.container .allow-left:hover,
+.container .allow-right:hover {
+  background-color: rgba(110, 109, 141, 0.2);
+}
+.container .allow-left {
+  left: 0;
+}
+.container .allow-right {
+  right: 0;
+}
+.container .button-circles {
+  position: absolute;
+  display: flex;
+  width: 80px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+}
+.container .button-circles .circle {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: rgba(123, 134, 162, 0.2);
+  cursor: pointer;
+}
+.container .button-circles .circle.active {
+  background-color: rgba(110, 109, 141, 0.6);
+}
